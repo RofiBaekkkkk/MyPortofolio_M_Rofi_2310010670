@@ -1,0 +1,341 @@
+.jumbotron {
+    position: relative;
+    background-image: url('image5.jpg'); /* Ganti dengan gambar yang diinginkan */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Overlay Gradien */
+  .jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+  }
+
+  /* Animasi teks muncul */
+  .jumbotron .content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Efek hover pada tombol */
+  .jumbotron .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+  }
+
+  .jumbotron .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+
+  .jumbotron .btn-outline-light {
+    border-color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+  }
+
+  .jumbotron .btn-outline-light:hover {
+    transform: scale(1.1);
+  }
+
+  .jumbotron h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .jumbotron p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+
+  .about-section {
+    padding: 60px 0;
+    background: linear-gradient(to right, #434343, #ffffff);
+    color: #333;
+  }
+
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .about-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .about-text h3 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+   .portfolio-section {
+      padding: 60px 0;
+      background-color: #f7f7f7;
+    }
+
+    .portfolio-title {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .portfolio-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h3 {
+      font-size: 1.5rem;
+      margin: 0;
+
+    }
+    .portfolio-section {
+        padding: 60px 0;
+        background-color: #f7f7f7;
+      }
+  
+      .portfolio-title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+  
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+      }
+  
+      .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+  
+      .portfolio-item:hover img {
+        transform: scale(1.1);
+      }
+  
+      .portfolio-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+  
+      .portfolio-item:hover .overlay {
+        opacity: 1;
+      }
+  
+      .overlay h3 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .contact-section {
+        padding: 60px 0;
+        background-color: #f7f7f7;
+      }
+  
+      .contact-title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+  
+      .contact-form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+  
+      .contact-form input, .contact-form textarea {
+        border-radius: 5px;
+        padding: 15px;
+      }
+  
+      .contact-form button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+      }
+  
+      .contact-form button:hover {
+        background-color: #0056b3;
+      }
+  
+      .social-icons a {
+        font-size: 2rem;
+        color: #333;
+        margin: 0 15px;
+        transition: color 0.3s ease-in-out;
+      }
+  
+      .social-icons a:hover {
+        color: #007bff;
+      }
+  
+      .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+      }
+  
+      .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 40px 0;
+      }
+  
+      .footer h5 {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      .footer p, .footer a {
+        color: #ccc;
+        text-decoration: none;
+      }
+  
+      .footer a:hover {
+        color: #fff;
+      }
+  
+      .footer .social-icons a {
+        font-size: 1.5rem;
+        color: #ccc;
+        margin-right: 15px;
+        transition: color 0.3s ease-in-out;
+      }
+  
+      .footer .social-icons a:hover {
+        color: #007bff;
+      }
+  
+      .footer .copyright {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #444;
+        margin-top: 20px;
+        color: #bbb;
+      }
+
+      .skills-section {
+        padding: 60px 0;
+        background-color: #f7f7f7;
+      }
+  
+      .skills-title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+  
+      .skill {
+        margin-bottom: 25px;
+      }
+  
+      .progress {
+        height: 25px;
+        background-color: #e0e0e0;
+      }
+  
+      .progress-bar {
+        background-color: #007bff;
+      }
+  
+      .skill-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
